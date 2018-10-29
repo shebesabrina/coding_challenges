@@ -6,11 +6,16 @@ const rl = readline.createInterface({
 });
 
 rl.question("What range do you want?", answer => {
-  console.log(answer);
-
+  // console.log(answer);
   const range = Array.from({length: parseInt(answer) + 1}, (x, i) => i);
-  range.shift();
-  range.forEach(num => {
+  fizzBuzzLogic(range);
+  rl.close();
+});
+
+
+function fizzBuzzLogic(answer) {
+  answer.shift();
+  answer.forEach(num => {
     if (num % 3 == 0 && num % 5 == 0) {
       console.log("FizzBuzz");
     } else if (num % 3 == 0) {
@@ -21,5 +26,4 @@ rl.question("What range do you want?", answer => {
       console.log(num);
     }
   });
-  rl.close();
-});
+}
