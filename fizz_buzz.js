@@ -1,29 +1,22 @@
-const readline = require('readline');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+var readline = require('readline-sync');
+
+var question = readline.question("What range would you like?");
+
+console.log(question);
+
+const answer = Array.from({length: parseInt(question) + 1}, (x,i) => i);
+
+answer.shift();
+
+answer.forEach(function(element) {
+  if (element % 3 == 0 && element % 5 == 0) {
+    console.log("FizzBuzz");
+  } else if (element % 3 == 0){
+    console.log("Fizz");
+  } else if (element % 5 == 0) {
+    console.log("Buzz");
+  } else {
+    console.log(element);
+  }
 });
-
-rl.question("What range do you want?", answer => {
-  // console.log(answer);
-  const range = Array.from({length: parseInt(answer) + 1}, (x, i) => i);
-  fizzBuzzLogic(range);
-  rl.close();
-});
-
-
-function fizzBuzzLogic(answer) {
-  answer.shift();
-  answer.forEach(num => {
-    if (num % 3 == 0 && num % 5 == 0) {
-      console.log("FizzBuzz");
-    } else if (num % 3 == 0) {
-      console.log("Fizz");
-    } else if (num % 5 == 0){
-      console.log("Buzz");
-    } else {
-      console.log(num);
-    }
-  });
-}
