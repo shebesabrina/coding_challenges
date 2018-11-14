@@ -1,7 +1,7 @@
-string = "abc abc"
+string = "abc"
 
 def is_unique?(string)
-  true if string.chars.uniq
+  string.chars.uniq == string.chars
 end
 
 puts is_unique?(string)

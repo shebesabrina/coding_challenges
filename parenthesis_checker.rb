@@ -1,3 +1,5 @@
+require 'pry'
+
 def is_valid(string_input)
   return false if string_input.nil? || string_input.length.odd? || string_input.empty?
   payload = {
@@ -8,6 +10,7 @@ def is_valid(string_input)
 
   stack = []
   string_input.each_char do |char|
+    binding.pry
     if payload.has_key?(char)
       stack << char
     else
@@ -19,5 +22,5 @@ def is_valid(string_input)
   return false
 end
 
-s = "(("
+s = "()"
 puts is_valid(s)
