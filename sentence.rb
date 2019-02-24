@@ -2,16 +2,19 @@ require 'pry'
 words = ["the", "clock", "struck", "twelve", "."]
 
 def sentence_structure(words)
-  sentence = ""
+  sentence = []
   words.each do |word|
-    # binding.pry
-    sentence = sentence + word + " "
+    sentence.append(word)
   end
+  # sentence = ""
+  # words.each do |word|
+  #   sentence = sentence + word + " "
+  # end
   # sentence = []
   # words.each do |word|
   #   sentence << word
   # end
-  sentence
+  sentence.join(" ")
 end
 
 p sentence_structure(words)
