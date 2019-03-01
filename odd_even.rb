@@ -1,5 +1,6 @@
 require 'pry'
-
+puts "Pick a number"
+number = gets.chomp.to_i
 def odd_or_even(number)
   if  number.abs == 42
     puts 'You picked my favorite number'
@@ -11,4 +12,4 @@ def odd_or_even(number)
   end
 end
 
-puts odd_or_even(42)
+puts odd_or_even(number)
