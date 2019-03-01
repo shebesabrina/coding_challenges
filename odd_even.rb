@@ -5,6 +5,8 @@ def odd_or_even(number)
   if number % 2 == 0
     puts "You picked an even number"
   else
+    number = number - 2
+    odd_or_even(number)
     puts "You picked an odd number"
   end
 end
