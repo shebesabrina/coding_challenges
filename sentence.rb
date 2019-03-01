@@ -3,9 +3,14 @@ words = ["the", "clock", "struck", "twelve", "."]
 
 def sentence_structure(words)
   sentence = []
-  words.each do |word|
-    sentence.append(word)
-  end
+  binding.pry
+  # sentence_structure(words)
+
+
+  # sentence = []
+  # words.each do |word|
+  #   sentence.append(word)
+  # end
   # sentence = ""
   # words.each do |word|
   #   sentence = sentence + word + " "
