@@ -6,7 +6,12 @@ def sentence_structure(words, sentence = "")
     return sentence
   else
     word = words.shift
-    updated_sentence = sentence + word + " "
+    if word.include?(".")
+      updated_sentence = sentence + word
+    else
+      updated_sentence = sentence + word + " "
+    end
+
     sentence_structure(words, updated_sentence)
   end
 
