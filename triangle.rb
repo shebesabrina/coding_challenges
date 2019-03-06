@@ -1,9 +1,8 @@
 require 'pry'
 
-def triangle(number)
-  s = "#"
-  number.times do
-    puts s = s + s
+def triangle(char)
+  char.length.times do
+    puts s + "#"
   end
 end
 
