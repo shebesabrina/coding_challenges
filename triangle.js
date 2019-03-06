@@ -1,2 +1,2 @@
-for (let sym = "#"; sym.length < 8; sym += "#")
+for (let sym = "#"; sym.length < 10; sym += "#")
   console.log(sym);

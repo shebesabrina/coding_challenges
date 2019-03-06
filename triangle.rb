@@ -1,9 +1,7 @@
 require 'pry'
 
-def triangle(char)
-  char.length.times do
-    puts s + "#"
-  end
-end
+sym = "*"
 
-triangle(9)
+while sym.length < 10
+  puts sym += "*"
+end
